@@ -19,6 +19,5 @@ if __name__ == "__main__":
             page_text = page.extract_text()
             text += page_text
 
-    input = model.encode(text)
-    output = model.decode(input)
-    print(output)
+    text_output = model.summarise(text)
+    print(text_output)

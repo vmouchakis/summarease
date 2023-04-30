@@ -15,6 +15,11 @@ class Model():
         out = self.tokenizer.batch_decode(input, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
         return out
     
+    def summarise(self, text):
+        model_output = self.encode(text)
+        text_output = self.decode(model_output)
+        return text_output
+    
 
 if __name__ == "__main__":
     ARTICLE_TO_SUMMARIZE = (
